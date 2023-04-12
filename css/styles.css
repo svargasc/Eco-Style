@@ -123,4 +123,7 @@ header{
         align-items: center;
         height: 220px;
     }
+    .sec{
+        padding: 16px;
+    }
 }
