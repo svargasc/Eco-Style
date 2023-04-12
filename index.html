@@ -10,13 +10,29 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <h2 class="logo">Eco-Style</h2>
         <nav class="navigation">
             <a href="#" class="active">Home</a>
             <a href="./html/aboutUs.html">About us</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
+        </nav>
+    </header> -->
+    <header>
+        <!-- <h2 class="logo">Eco-Style</h2> -->
+        <nav class="navigation">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i>≡</i>
+            </label>
+            <label class="logo">Eco-Style</label>
+            <ul>
+                <li><a href="../index.html"  class="active">Home</a></li>
+                <li><a href="./html/aboutUs.html">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <section class="parallax">
@@ -48,6 +64,27 @@
             way of living that benefits both individuals and the planet.
         </p>
     </section>
+    <div class="body">
+        <section class="container">
+            <div class="wrapper">
+                <img src="./images/eco1.jfif" class="imgCarousel2" name="eco1" id="mainPhoto">
+                <div class="caption-wrapper">
+                    <div id="caption">Eco1</div>
+                    <div class="country">Ecologity</div>
+                    <div class="btn">
+                        <a href="#">Add to read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-wrapper">
+                <img src="./images/eco1.jfif" class="imgCarousel" name="eco1">
+                <img src="./images/eco2.jfif" class="imgCarousel" name="eco2">
+                <img src="./images/eco3.jfif" class="imgCarousel" name="eco3">
+                <img src="./images/eco4.jfif" class="imgCarousel" name="eco4">
+                <img src="./images/eco5.jfif" class="imgCarousel" name="eco5">
+            </div>
+        </section>
+    </div>
 
 
     <script src="./js/script.js"></script>
