@@ -7,14 +7,16 @@
 }
 
 body{
-    background: #359381
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
     /* min-height: 100vh;
     overflow-x: hidden; */
 }
 
 nav{
     position: absolute;
-    background: #003329;
+    background: #0033294a;
     height: 80px;
     width: 100%;
 }
