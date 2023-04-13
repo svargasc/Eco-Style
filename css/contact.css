@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #b6cec9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+nav {
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+}
+
+label.logo {
+    color: #359381;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 80px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .2s ease;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #000000;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 13px;
+    text-transform: lowercase;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+a.active,
+a:hover {
+    background: #359381;
+    transition: .5s;
+}
+
+.checkbtn {
+    line-height: 80px;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px;
+    display: none;
+}
+
+.checkbtn i {
+    color: #000000;
+    padding: 5px;
+    border-radius: 8px;
+    transition: .5s ease;
+}
+
+.checkbtn i:hover {
+    background: #359381;
+}
+
+#check {
+    display: none;
+}

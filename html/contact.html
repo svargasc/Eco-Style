@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+    <nav class="navigation">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i>≡</i>
+        </label>
+        <label class="logo">Eco-Style</label>
+        <ul>
+            <li class="primer"><a href="../index.html" class="active">Home</a></li>
+            <li><a href="../html/aboutUs.html">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <form action="https://formsubmit.co/svc.vargas03@gmail.com" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <label for="subject">Affair:</label>
+        <input type="text" name="subject">
+        <label for="comments">Comments:</label>
+        <textarea name="comments" cols="15" rows="5"></textarea>
+        <button type="submit">Send</button>
+        <input type="hidden" name="_next" value="index.html">
+        <input type="hidden" name="_captcha" value="false">
+   </form>
+</body>
+</html>
