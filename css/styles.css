@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: #ffff;
     min-height: 100vh;
     overflow-x: hidden;
@@ -13,14 +13,14 @@ body{
 
 
 
-nav{
+nav {
     position: absolute;
     height: 80px;
     width: 100%;
     z-index: 1;
 }
 
-label.logo{
+label.logo {
     color: #359381;
     font-size: 30px;
     line-height: 80px;
@@ -38,7 +38,7 @@ nav ul {
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     color: #000000;
     font-size: 17px;
     padding: 7px 13px;
@@ -48,12 +48,13 @@ nav ul li a{
     margin-left: 10px;
 }
 
-a.active, a:hover{
+a.active,
+a:hover {
     background: #359381;
     transition: .5s;
 }
 
-.checkbtn{
+.checkbtn {
     line-height: 80px;
     font-size: 30px;
     float: right;
@@ -62,77 +63,102 @@ a.active, a:hover{
     display: none;
 }
 
-.checkbtn i{
+.checkbtn i {
     color: #000000;
     padding: 5px;
     border-radius: 8px;
     transition: .5s ease;
 }
 
-.checkbtn i:hover{
+.checkbtn i:hover {
     background: #359381;
 }
 
-#check{
+#check {
     display: none;
 }
 
 @media (max-width: 858px) {
+
     /* mobile mode */
-    body{
+    body {
         margin: 0;
         padding: 0;
     }
-    header{
+
+    header {
         background: none;
     }
+    
     .checkbtn {
-      display: block;
+        display: block;
     }
-     ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      top: 40px;
-      left: -100%;
-      padding-top: 80px;
-      text-align: center;
-      transition: .5s ease;
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 40px;
+        left: -100%;
+        padding-top: 80px;
+        text-align: center;
+        transition: .5s ease;
     }
+
     nav ul li {
-      display: block;
-      margin: 30px 0;
-      line-height: 30px;
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
     }
+
     nav ul li a {
-      font-size: 20px;
+        color: #fff;
+        font-size: 20px;
     }
-    a.active, a:hover {
-      background: #359381;
-      color: #003329;
+
+    a.active,
+    a:hover {
+        background: #003329;
+        color: #ffffff;
     }
-    #check:checked ~ ul {
-      left: 0;
-      display: block;
-      background: #adbeb2;
-      position: fixed;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      top: 0;
-      z-index: -1;
+
+    #check:checked~ul {
+        left: 0;
+        display: block;
+        background: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        z-index: -1;
     }
-    .navigation{
+
+    #check:checked~ul li {
+        padding: 0;
+        margin: 0;
+    }
+
+    #check:checked~ul li.primer {
+        margin-top: 80px;
+        color: #fff;
+    }
+
+    .navigation {
         width: 100%;
         padding: 0;
         margin: 0;
         background: #fff;
     }
-    .parallax{
+
+    .parallax {
         margin: 0;
         padding: 0;
     }
-  }
+    .checkbtn{
+        margin-right: 0;
+    }
+}
 
 
 
@@ -171,7 +197,7 @@ a.active, a:hover{
     color: #ffff;
 } */
 
-.parallax{
+.parallax {
     position: relative;
     display: flex;
     justify-content: center;
@@ -179,14 +205,14 @@ a.active, a:hover{
     height: 110vh;
 }
 
-#text{
+#text {
     position: absolute;
     font-size: 5em;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
 }
 
-.parallax img{
+.parallax img {
     position: absolute;
     top: 0;
     left: 0;
@@ -194,92 +220,64 @@ a.active, a:hover{
     pointer-events: none;
 }
 
-.sec{
+.sec {
     position: relative;
     background: #003329;
     padding: 100px;
 }
 
-.sec h2{
+.sec h2 {
     font-size: 3em;
     color: #fff;
     margin-bottom: 10px;
 }
 
-.sec p{
+.sec p {
     font-size: 1em;
     color: #fff;
     font-weight: 300;
 }
 
-@media (max-width: 480px){
-    header{
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        height: 40px;
-        background: #003329;
-    }
-    h2.logo{
-        font-size: 14px;
-        margin-right: 0;
-        width: 18%;
-    }
-    .navigation{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .navigation a{
-        font-size: 12px;
-        padding: 8px;
-        margin: 0;
-        width: 30%;
-        text-align: center;
-    }
-    #text{
-        top: 46%;
-        font-size: 40px;
-    }
-    .parallax{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 220px;
-    }
-    .sec{
-        padding: 16px;
-    }
-}
+
 
 
 
 /* Carousel */
-.body{
+.body {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
     background: #adbeb2;
-    overflow: hidden;
+    flex-wrap: wrap;
 }
 
-#mainPhoto{
+#mainPhoto {
     width: 100%;
     height: 500px;
     object-fit: cover;
     transition: 0.3s;
 }
 
-.container{
-    
+.container {
     margin: 2%;
 }
+.textAside{
+    background: #adbeb2;
+    height: 620px;
+    width: 540px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    border: 2px solid #daecdf;
+    padding: 8px;
+    font-size: 15.4px;
+    box-shadow: 0px 0px 10px 8px rgba(255, 255, 255, 0.2);
+}
+.textAside p{
+    padding-top: 14px;
+    
+}
 
-.imgCarousel{
+.imgCarousel {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -288,34 +286,35 @@ a.active, a:hover{
     transition: 0.3s;
 }
 
-.imgCarousel:hover{
+.imgCarousel:hover {
     width: 110px;
     height: 110px;
     border: 3px solid #daecdf;
     margin: 3px;
 }
 
-img.imgCarousel, img.imgCarousel2{
+img.imgCarousel,
+img.imgCarousel2 {
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
 }
 
-.img-wrapper{
+.img-wrapper {
     margin-top: 10px;
 }
 
-.wrapper{
+.wrapper {
     position: relative;
 }
 
 .wrapper:hover #mainPhoto,
-.wrapper:hover .caption-wrapper{
+.wrapper:hover .caption-wrapper {
     opacity: 1;
     height: 550px;
 }
 
-.caption-wrapper{
+.caption-wrapper {
     top: 0;
     opacity: 0;
     position: absolute;
@@ -326,7 +325,7 @@ img.imgCarousel, img.imgCarousel2{
     transition: 0.3s;
 }
 
-.caption-wrapper #caption{
+.caption-wrapper #caption {
     text-transform: capitalize;
     font-weight: 700;
     margin-top: 50px;
@@ -335,7 +334,7 @@ img.imgCarousel, img.imgCarousel2{
     color: #daecdf;
 }
 
-.caption-wrapper .country{
+.caption-wrapper .country {
     margin-top: -5px;
     color: #daecdf;
     text-align: center;
@@ -345,12 +344,12 @@ img.imgCarousel, img.imgCarousel2{
     font-size: 18px;
 }
 
-.caption-wrapper .btn{
+.caption-wrapper .btn {
     margin: 280px 0;
     text-align: center;
 }
 
-.caption-wrapper .btn a{
+.caption-wrapper .btn a {
     background: rgba(225, 225, 225, 0.8);
     box-shadow: 0px 5px 5px 2px rgba(33, 47, 48, 0.3);
     color: rgba(33, 47, 48, 1);
@@ -362,8 +361,71 @@ img.imgCarousel, img.imgCarousel2{
     transition: 0.3s;
 }
 
-.caption-wrapper .btn a:hover{
+.caption-wrapper .btn a:hover {
     background: rgba(33, 47, 48, 0.9);
     border: 2px solid #daecdf;
     color: #daecdf;
+}
+
+
+
+
+
+/* MediaQuerys */
+
+@media (max-width: 480px) {
+    header {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: 40px;
+        background: #003329;
+    }
+
+    h2.logo {
+        font-size: 14px;
+        margin-right: 0;
+        width: 18%;
+    }
+
+    .navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navigation a {
+        font-size: 12px;
+        padding: 8px;
+        margin: 0;
+        width: 30%;
+        text-align: center;
+    }
+
+    #text {
+        top: 46%;
+        font-size: 40px;
+    }
+
+    .parallax {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 220px;
+    }
+
+    .sec {
+        width: 100%;
+        padding: 16px;
+    }
+    .textAside{
+        height: 100%;
+        width: 100%;
+    }
+    .textAside p{
+        padding: 8px;
+        font-weight: 400;
+    }
 }
