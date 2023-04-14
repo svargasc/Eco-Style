@@ -1,136 +1,300 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
 body{
-  background-image: url(../images/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-    /* min-height: 100vh;
-    overflow-x: hidden; */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 110%);
 }
 
-nav{
-    position: absolute;
-    background: #0033294a;
-    height: 80px;
-    width: 100%;
+nav {
+  top: 0;
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  z-index: 1;
 }
 
-label.logo{
-    color: #fff;
-    font-size: 30px;
-    line-height: 80px;
-    padding: 0 80px;
-    letter-spacing: -1px;
-    font-weight: 800;
-    font-style: italic;
-    transition: .2s ease;
+label.logo {
+  color: #359381;
+  font-size: 30px;
+  line-height: 80px;
+  padding: 0 80px;
+  letter-spacing: -1px;
+  font-weight: 800;
+  font-style: italic;
+  transition: .2s ease;
 }
 
 nav ul {
-    float: right;
-    margin-right: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
 }
 
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
+nav ul li a {
+  color: #000000;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 13px;
+  text-transform: lowercase;
+  text-decoration: none;
+  margin-left: 10px;
 }
 
-nav ul li a{
-    color: #fff;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 13px;
-    text-transform: lowercase;
+a.active,
+a:hover {
+  background: #359381;
+  transition: .5s;
 }
 
-a.active, a:hover{
-    background: #359381;
-    transition: .5s;
+.checkbtn {
+  line-height: 80px;
+  font-size: 30px;
+  float: left;
+  margin-left: 20%;
+  cursor: pointer;
+  margin-right: 20px;
+  display: none;
 }
 
-.checkbtn{
-    line-height: 80px;
-    font-size: 30px;
-    float: right;
-    cursor: pointer;
-    margin-right: 40px;
-    display: none;
+.checkbtn i {
+  color: #000000;
+  padding: 5px;
+  border-radius: 8px;
+  transition: .5s ease;
 }
 
-.checkbtn i{
-    color: #fff;
-    padding: 5px;
-    border-radius: 8px;
+.checkbtn i:hover {
+  background: #359381;
+}
+
+#check {
+  display: none;
+}
+
+h4,small,a{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+.Carousel{
+  width: 100%;
+  margin: 0px 60px;
+}
+.Carousel h2{
+  font-size: 26px;
+  line-height: 38px;
+  padding-bottom: 24px;
+  opacity: .9;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+/* images */
+
+.slick-list{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 304px;
+  padding: 10px 0px;
+  margin: 0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+  margin-top: 20%;
+}
+.slick-track{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: .5s ease-in-out;
+}
+.slick{
+  position: relative;
+  width: 275px;
+  padding: 0 18px;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}
+.slick h4{
+  position: absolute;
+  z-index: 1;
+  font-size: 22px;
+  line-height: 23px;
+  color: #fff;
+  padding: 15px;
+}
+.slick h4 small{
+  font-size: 15px;
+  display: block;
+}
+.slick a img{
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+  transition: .3s ease-in-out;
+}
+.slick a img:hover{
+  opacity: .85;
+}
+
+/* buttons */
+
+.slick-arrow{
+  border-radius: 30px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+  border: 0;
+  cursor: pointer;
+}
+.slick-arrow:focus{
+  outline: 0;
+}
+.slick-arrow svg{
+  width: 12px;
+  height: 100%;
+  color: rgba(0,0,0,.7);
+}
+.slick-prev{
+  left: 0px;
+}
+.slick-next{
+  right: 0px;
+}
+
+
+
+@media (max-width: 858px) {
+
+  /* mobile mode */
+  header {
+    background: none;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 40px;
+    left: -100%;
+    padding-top: 80px;
+    text-align: center;
     transition: .5s ease;
-}
-
-.checkbtn i:hover{
-    background: #359381;
-}
-
-#check{
-    display: none;
-}
-
-@media (max-width: 952px){
-    labe.logo{
-        font-size: 25px;
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 952px) {
-    /* table mode */
-    label.logo {
-      font-size: 25px;
-      padding-left: 50px;
-    }
-    nav ul li a {
-      font-size: 14px;
-    }
   }
-  
-  @media (max-width: 858px) {
-    /* mobile mode */
-    .checkbtn {
-      display: block;
-    }
-     ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      top: 80px;
-      left: -100%;
-      padding-top: 80px;
-      text-align: center;
-      transition: .5s ease;
-    }
-    nav ul li {
-      display: block;
-      margin: 30px 0;
-      line-height: 30px;
-    }
-    nav ul li a {
-      font-size: 20px;
-    }
-    a.active, a:hover {
-      background: none;
-      color: #003329
-    }
-    #check:checked ~ ul {
-      left: 0;
-    }
+
+  nav ul li {
+    display: block;
+    margin: 30px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  a.active,
+  a:hover {
+    background: #003329;
+    color: #ffffff;
+  }
+
+  #check:checked~ul {
+    left: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  #check:checked~ul li {
+    padding: 0;
+    margin: 0;
+  }
+
+  #check:checked~ul li.primer {
+    margin-top: 80px;
+    color: #fff;
+  }
+
+  .navigation {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+  }
+
+  .checkbtn {
+    margin-right: 0;
   }
 
 
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px;
+    max-width: 90vw;
+    overflow: hidden;
+    margin-top: 20%;
+  }
+  .slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    transition: .5s ease-in-out;
+  }
+  .slick{
+    position: relative;
+    width: 600px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    margin-left: 0%;
+  }
+  .slick-prev{
+    left: 0px;
+  }
+  .slick-next{
+    right: 0px;
+    margin-right: 16%;
+  }
 
+}

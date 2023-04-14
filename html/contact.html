@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
-    <nav class="navigation">
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i>≡</i>
-        </label>
-        <label class="logo">Eco-Style</label>
-        <ul>
-            <li class="primer"><a href="../index.html" class="active">Home</a></li>
-            <li><a href="../html/aboutUs.html">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="../html/contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="navigation">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i>≡</i>
+            </label>
+            <label class="logo">Eco-Style</label>
+            <ul>
+                <li class="primer"><a href="../index.html">Home</a></li>
+                <li><a href="../html/aboutUs.html">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="../html/contact.html"  class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
         <form action="https://formsubmit.co/svc.vargas03@gmail.com" method="POST">
             <label for="email">Email:</label>
             <input type="email" name="email" placeholder="exameple@example.com" required>
@@ -29,7 +31,7 @@
             <label for="comments">Comments:</label>
             <textarea name="comments" cols="15" rows="5"></textarea>
             <button type="submit">Send</button>
-            <input type="hidden" name="_next" value="index.html">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
             <input type="hidden" name="_captcha" value="false">
        </form>
 </body>
